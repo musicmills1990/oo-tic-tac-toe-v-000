@@ -116,7 +116,7 @@ end
 
   def play
     ##I need something where it plays the function of #turn once first, then it sends it into this loop where it keeps playing turn until #over? is true...
-   while over?(board) == false
+   while over?(@board) == false
      turn(board)
     end
       if winner(board) == "X"
