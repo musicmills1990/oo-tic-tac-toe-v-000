@@ -106,9 +106,9 @@ end
 
 
   def winner
-  if won?(board) && @board[won?(board)[0]] == "X" && @board[won?(board)[1]] == "X" && @board[won?(board)[2]] == "X"
+  if won? && @board[won?[0]] == "X" && @board[won?[1]] == "X" && @board[won?[2]] == "X"
       "X"
-  elsif won?(board) && @board[won?(board)[0]] == "O" && @board[won?(board)[1]] == "O" && @board[won?(board)[2]] == "O"
+  elsif won? && @board[won?[0]] == "O" && @board[won?[1]] == "O" && @board[won?[2]] == "O"
     "O"
     end
   end
