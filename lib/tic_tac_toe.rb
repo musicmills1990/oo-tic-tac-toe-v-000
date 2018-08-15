@@ -22,24 +22,24 @@ end
   end
 
 
-  def move(index, player)
+  def move
     @board[index] = player
   end
 
 
 
-  def position_taken?(location)
+  def position_taken?
     @board[location] != " " && @board[location] != ""
   end
 
 
 
-  def valid_move?(board, index)
+  def valid_move?
     index.between?(0,8) && !position_taken?(@board, index)
   end
 
 
-  def turn(board)
+  def turn
     puts "Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
@@ -53,7 +53,7 @@ end
 
 
 
-  def turn_count(board)
+  def turn_count
     counter = 0
     @board.each do |space|
       if space == "X" || space == "O"
@@ -65,7 +65,7 @@ end
 
 
 
-  def current_player(board)
+  def current_player
     if turn_count(board) % 2 == 0
       "X"
     else "O"
@@ -74,7 +74,7 @@ end
 
 
 
-  def won?(board)
+  def won?
     WIN_COMBINATIONS.detect do |win_combination|
       position_1 = @board[win_combination[0]]
       position_2 = @board[win_combination[1]]
@@ -85,7 +85,7 @@ end
 
 
 
-  def full?(board)
+  def full?
     @board.all? do |space|
       space == "X" || space == "O"
     end
@@ -93,19 +93,19 @@ end
 
 
 
-  def draw?(board)
+  def draw?
     full?(board) && !(won?(board))
   end
 
 
 
-  def over?(board)
+  def over?
     won?(board) || draw?(board)
   end
 
 
 
-  def winner(board)
+  def winner
   if won?(board) && @board[won?(board)[0]] == "X" && @board[won?(board)[1]] == "X" && @board[won?(board)[2]] == "X"
       "X"
   elsif won?(board) && @board[won?(board)[0]] == "O" && @board[won?(board)[1]] == "O" && @board[won?(board)[2]] == "O"
@@ -114,7 +114,7 @@ end
   end
 
 
-  def play(board)
+  def play
     ##I need something where it plays the function of #turn once first, then it sends it into this loop where it keeps playing turn until #over? is true...
    while over?(board) == false
      turn(board)
