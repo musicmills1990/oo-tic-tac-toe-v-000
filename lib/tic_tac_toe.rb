@@ -21,7 +21,7 @@ end
   end
 
 
-  def move(board,player = "X")
+  def move(index,player = "X")
     @board[index] = player
   end
 
