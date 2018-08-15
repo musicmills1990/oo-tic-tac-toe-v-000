@@ -100,7 +100,7 @@ end
 
 
   def over?
-    won?(board) || draw?(board)
+    won? || draw?
   end
 
 
