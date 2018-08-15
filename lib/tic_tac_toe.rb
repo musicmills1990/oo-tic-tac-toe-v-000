@@ -1,9 +1,6 @@
 class TicTacToe
-def initialize
-  @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-end
-def board=
-  @board = board
+def initialize(board = nil)
+  @board = board || array.new(9, " ")
 end
 
 
