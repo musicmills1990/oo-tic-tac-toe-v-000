@@ -21,8 +21,8 @@ end
   end
 
 
-  def move(index,player)
-    @board[index] = player
+  def move(index,current_player)
+    @board[index] = current_player
   end
 
 
