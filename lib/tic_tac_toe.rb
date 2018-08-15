@@ -15,7 +15,13 @@ end
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 
+  def input=
+    @input = input
+  end
 
+  def index=
+    @index = index
+    
   def input_to_index
     @input.to_i - 1
   end
