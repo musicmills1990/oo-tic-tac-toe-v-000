@@ -21,7 +21,7 @@ end
   end
 
 
-  def move(index,current_player = "X")
+  def move(index,current_player)
     @board[index] = current_player
   end
 
@@ -44,7 +44,7 @@ end
     index = input_to_index(input)
     if valid_move?(index)
       current_player
-      move(index,current_player = "X")
+      move(index,current_player)
       display_board
     else
       turn
