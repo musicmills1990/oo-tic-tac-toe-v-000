@@ -22,7 +22,7 @@ end
   def index=
     @index = index
   end
-  
+
   def input_to_index
     @input.to_i - 1
   end
@@ -41,7 +41,7 @@ end
 
 
   def valid_move?
-    index.between?(0,8) && !position_taken?
+    @index.between?(0,8) && !position_taken?
   end
 
 
