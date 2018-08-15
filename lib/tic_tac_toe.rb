@@ -117,13 +117,13 @@ end
   def play
     ##I need something where it plays the function of #turn once first, then it sends it into this loop where it keeps playing turn until #over? is true...
    while over? == false
-     turn(board)
+     turn
     end
-      if winner(board) == "X"
+      if winner == "X"
         puts "Congratulations X!"
-      elsif winner(board) == "O"
+      elsif winner == "O"
         puts "Congratulations O!"
-      elsif draw?(board) == true
+      elsif draw? == true
          puts "Cat's Game!"
     end
   end
