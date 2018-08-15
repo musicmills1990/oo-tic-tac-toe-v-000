@@ -27,8 +27,8 @@ end
 
 
 
-  def position_taken?
-    @board[@location] != " " && @board[@location] != ""
+  def position_taken?(index)
+    @board[index] != " " && @board[index] != ""
   end
 
 
