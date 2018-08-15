@@ -43,7 +43,7 @@ end
     input = gets.strip
     index = input_to_index(input)
     if valid_move?(index)
-      move(index,current_player(board))
+      move(index,player = "X")
       display_board
     else
       turn
