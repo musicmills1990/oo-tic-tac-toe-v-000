@@ -21,7 +21,7 @@ end
   end
 
 
-  def move(index,player)
+  def move(index,player = "X")
     @board[index] = player
   end
 
@@ -43,7 +43,7 @@ end
     input = gets.strip
     index = input_to_index(input)
     if valid_move?(index)
-      move(index,player)
+      move(index,player = "X")
       display_board
     else
       turn
